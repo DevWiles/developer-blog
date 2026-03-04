@@ -6,7 +6,7 @@ const Projects = () => {
       id="projects"
       className="bg-background px-4 py-20"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-4xl">
         <header className="flex flex-col items-center text-center">
           <div>
             <h2 className="text-2xl font-semibold md:text-3xl">

@@ -1,3 +1,7 @@
+import gmailIcon from '../assets/gmail.svg'
+import githubIcon from '../assets/github.svg'
+import bilibiliIcon from '../assets/bilibili.svg'
+
 const Contact = () => {
   return (
     <section
@@ -13,26 +17,55 @@ const Contact = () => {
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <a
             href="mailto:your@email"
-            className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-gray-200 transition hover:border-sky-400 hover:bg-white/10"
+            className="group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-4 text-sm text-gray-700 transition hover:border-sky-400 hover:bg-gray-50"
           >
-            <p className="font-medium text-white">邮箱</p>
-            <p className="mt-2 break-all text-xs text-gray-300">your@email</p>
+            <div>
+              <p className="font-medium text-gray-900">Gmail</p>
+              <p className="mt-2 break-all text-xs text-gray-600">
+                {/* TODO: 替换成你的真实邮箱 */}
+                your@gmail.com
+              </p>
+            </div>
+            <img
+              src={gmailIcon}
+              alt="Gmail"
+              className="h-8 w-8 flex-shrink-0"
+            />
           </a>
           <a
             href="https://github.com/your-github"
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-gray-200 transition hover:border-sky-400 hover:bg-white/10"
+            className="group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-4 text-sm text-gray-700 transition hover:border-sky-400 hover:bg-gray-50"
           >
-            <p className="font-medium text-white">GitHub</p>
-            <p className="mt-2 text-xs text-gray-300">github.com/your-github</p>
+            <div>
+              <p className="font-medium text-gray-900">GitHub</p>
+              <p className="mt-2 text-xs text-gray-600">github.com/your-github</p>
+            </div>
+            <img
+              src={githubIcon}
+              alt="GitHub"
+              className="h-8 w-8 flex-shrink-0"
+            />
           </a>
           <a
-            href="#"
-            className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-gray-200 transition hover:border-sky-400 hover:bg-white/10"
+            href="https://space.bilibili.com/your-id"
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-4 text-sm text-gray-700 transition hover:border-sky-400 hover:bg-gray-50"
           >
-            <p className="font-medium text-white">其他社交媒体</p>
-            <p className="mt-2 text-xs text-gray-300">例如 LinkedIn、微博等</p>
+            <div>
+              <p className="font-medium text-gray-900">Bilibili</p>
+              <p className="mt-2 text-xs text-gray-600">
+                {/* TODO: 替换成你的 B 站主页链接或昵称 */}
+                哔哩哔哩个人主页
+              </p>
+            </div>
+            <img
+              src={bilibiliIcon}
+              alt="Bilibili"
+              className="h-8 w-8 flex-shrink-0"
+            />
           </a>
         </div>
       </div>
