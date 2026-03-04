@@ -23,7 +23,7 @@ const Contact = () => {
               <p className="font-medium text-gray-900">Gmail</p>
               <p className="mt-2 break-all text-xs text-gray-600">
                 {/* TODO: 替换成你的真实邮箱 */}
-                your@gmail.com
+                nathan.demon66@gmail.com
               </p>
             </div>
             <img
@@ -40,7 +40,7 @@ const Contact = () => {
           >
             <div>
               <p className="font-medium text-gray-900">GitHub</p>
-              <p className="mt-2 text-xs text-gray-600">github.com/your-github</p>
+              <p className="mt-2 text-xs text-gray-600">github.com/DevWiles</p>
             </div>
             <img
               src={githubIcon}
@@ -49,16 +49,15 @@ const Contact = () => {
             />
           </a>
           <a
-            href="https://space.bilibili.com/your-id"
+            href="https://b23.tv/bi25Af4"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group relative flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-4 text-sm text-gray-700 shadow-md shadow-black/10 transition-all duration-300 hover:scale-[1.02] hover:border-sky-400 hover:bg-gray-50 hover:shadow-xl hover:shadow-black/20"
           >
             <div>
               <p className="font-medium text-gray-900">Bilibili</p>
               <p className="mt-2 text-xs text-gray-600">
-                {/* TODO: 替换成你的 B 站主页链接或昵称 */}
-                哔哩哔哩个人主页
+                b23.tv/bi25Af4
               </p>
             </div>
             <img
