@@ -10,8 +10,11 @@ const Projects = () => {
         <header className="flex flex-col items-center text-center">
           <div>
             <h2 className="text-2xl font-semibold md:text-3xl">
-              <span className="bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
-                有意思的项目
+              <span className="text-red-500">
+                项
+              </span>
+              <span className="text-white">
+                目
               </span>
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-gray-300 md:text-base">
