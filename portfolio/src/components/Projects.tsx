@@ -8,7 +8,7 @@ const Projects = () => {
       id="projects"
       ref={ref}
       className={`bg-background px-4 py-20 transition-all duration-700 ease-out ${
-        isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        isIntersecting ? 'animate-bounce-fade-in opacity-100 translate-y-0' : 'opacity-0'
       }`}
     >
       <div className="mx-auto max-w-4xl">

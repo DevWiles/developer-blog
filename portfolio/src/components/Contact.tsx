@@ -31,7 +31,7 @@ const Contact = () => {
       id="contact"
       ref={ref}
       className={`bg-background px-4 py-20 relative transition-all duration-700 ease-out ${
-        isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        isIntersecting ? 'animate-bounce-fade-in opacity-100 translate-y-0' : 'opacity-0'
       }`}
     >
       <div className="mx-auto max-w-5xl">
@@ -96,7 +96,7 @@ const Contact = () => {
 
       {/* Toast 提示 */}
       {showToast && (
-        <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isFadingOut ? 'animate-quick-fade-out opacity-0' : 'opacity-100'}`}>
           <div className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
             <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
