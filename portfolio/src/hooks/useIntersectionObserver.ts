@@ -9,7 +9,7 @@ interface UseIntersectionObserverOptions {
 export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>({
   threshold = 0.1,
   rootMargin = '0px',
-  triggerOnce = true,
+  triggerOnce = false, // 改为默认 false，支持反复触发
 }: UseIntersectionObserverOptions = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false)
   const ref = useRef<T>(null)
@@ -22,10 +22,6 @@ export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true)
-          
-          if (triggerOnce && element) {
-            observer.unobserve(element)
-          }
         } else {
           if (!triggerOnce) {
             setIsIntersecting(false)
