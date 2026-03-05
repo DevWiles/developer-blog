@@ -11,7 +11,7 @@ const Hero = () => {
     // 在标题动画结束后（约 2.3 秒），显示简介和按钮
     const timer = setTimeout(() => {
       setContentVisible(true)
-    }, 1100)
+    }, 1900)
     
     return () => clearTimeout(timer)
   }, [])
@@ -30,7 +30,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-1000 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '100ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '900ms' : '100ms' }}
           >
             你好，
           </span>
@@ -38,7 +38,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-700 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '400ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '1200ms' : '100ms' }}
           >
             我
           </span>
@@ -46,7 +46,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-700 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '500ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '1300ms' : '100ms' }}
           >
             是
           </span>
@@ -54,7 +54,7 @@ const Hero = () => {
             className={`text-white transition-all duration-1500 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '800ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '1600ms' : '100ms' }}
           >
             Wiles
           </span>
