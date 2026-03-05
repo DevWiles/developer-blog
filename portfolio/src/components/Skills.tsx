@@ -50,10 +50,27 @@ const filterSkills = (category: SkillCategory | 'all'): Skill[] => {
   return skills.filter((skill) => skill.category === category)
 }
 
+// 熟练度排序规则：advanced > intermediate > beginner
+const levelOrder: Record<Skill['level'], number> = {
+  'advanced': 3,
+  'intermediate': 2,
+  'beginner': 1,
+}
+
+const sortSkillsByLevel = (skillsToSort: Skill[]): Skill[] => {
+  return [...skillsToSort].sort((a, b) => {
+    // 首先按熟练度排序
+    const levelDiff = levelOrder[b.level] - levelOrder[a.level]
+    if (levelDiff !== 0) return levelDiff
+    // 熟练度相同时按名称字母顺序排序
+    return a.name.localeCompare(b.name)
+  })
+}
+
 const Skills = () => {
   const { ref, isIntersecting, isExiting } = useIntersectionObserver<HTMLElement>({ threshold: 0.25, downwardOnly: true })
   const [activeCategory, setActiveCategory] = useState<SkillCategory | 'all'>('all')
-  const filtered = filterSkills(activeCategory)
+  const filtered = sortSkillsByLevel(filterSkills(activeCategory))
   
   // 计算需要多少个占位卡片来保持高度一致（基于 3 列 × 4 行 = 12 个位置）
   const maxCards = 12
