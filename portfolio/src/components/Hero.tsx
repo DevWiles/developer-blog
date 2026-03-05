@@ -11,7 +11,7 @@ const Hero = () => {
     // 在标题动画结束后（约 2.3 秒），显示简介和按钮
     const timer = setTimeout(() => {
       setContentVisible(true)
-    }, 1900)
+    }, 1600)
     
     return () => clearTimeout(timer)
   }, [])
@@ -22,7 +22,11 @@ const Hero = () => {
       className="relative flex min-h-screen items-center justify-between bg-background px-4 pt-24 pb-0"
     >
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm uppercase tracking-[0.3em] text-sky-400/80">
+        <p 
+          className={`text-sm uppercase tracking-[0.3em] text-sky-400/80 transition-all duration-1000 ease-out transform ${
+            contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          }`}
+        >
           Full Stack Developer
         </p>
         <h1 className="mt-4 text-4xl font-bold sm:text-5xl md:text-6xl">
@@ -30,7 +34,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-1000 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '900ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '600ms' : '100ms' }}
           >
             你好，
           </span>
@@ -38,7 +42,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-700 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '1200ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '900ms' : '100ms' }}
           >
             我
           </span>
@@ -46,7 +50,7 @@ const Hero = () => {
             className={`bg-gradient-to-r from-sky-400 via-purple-400 to-pink-500 bg-clip-text text-transparent transition-all duration-700 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '1300ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '1000ms' : '100ms' }}
           >
             是
           </span>
@@ -54,7 +58,7 @@ const Hero = () => {
             className={`text-white transition-all duration-1500 ease-out ${
               titleAnimated ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: titleAnimated ? '1600ms' : '100ms' }}
+            style={{ transitionDelay: titleAnimated ? '1300ms' : '100ms' }}
           >
             Wiles
           </span>
