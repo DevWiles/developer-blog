@@ -2,7 +2,7 @@ import profileImage from '../assets/profile.jpg'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const About = () => {
-  const { ref, isIntersecting, isExiting } = useIntersectionObserver<HTMLElement>({ threshold: 0.1, downwardOnly: true })
+  const { ref, isIntersecting, isExiting } = useIntersectionObserver<HTMLElement>({ threshold: 0.2, downwardOnly: true })
   return (
     <section
       id="about"
