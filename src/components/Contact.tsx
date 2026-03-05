@@ -31,7 +31,7 @@ const Contact = () => {
       id="contact"
       ref={ref}
       className={`bg-background px-4 py-20 relative transition-all duration-700 ease-out ${
-        isIntersecting ? 'animate-bounce-fade-in opacity-100 translate-y-0' : 'opacity-0'
+        isIntersecting ? 'animate-bounce-fade-in opacity-100 translate-y-0' : 'bounce-fade-reset'
       }`}
     >
       <div className="mx-auto max-w-5xl">

@@ -68,10 +68,16 @@
 
 /* 弹性淡入 class - 用于 section */
 .animate-bounce-fade-in {
-  animation: bounce-fade-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: bounce-fade-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 /* 快速淡出 class */
 .animate-quick-fade-out {
   animation: quick-fade-out 0.4s ease-in forwards;
+}
+
+/* 反复触发时的淡出状态 - 用于重置动画 */
+.bounce-fade-reset {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
 }
