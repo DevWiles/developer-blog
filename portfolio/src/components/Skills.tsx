@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { Skill, SkillCategory } from '../data/skills'
 import { skills } from '../data/skills'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const categories: { id: SkillCategory | 'all'; label: string }[] = [
   { id: 'all', label: '全部' },
@@ -15,6 +16,7 @@ const filterSkills = (category: SkillCategory | 'all'): Skill[] => {
 }
 
 const Skills = () => {
+  const { ref, isIntersecting } = useIntersectionObserver<HTMLElement>({ threshold: 0.1 })
   const [activeCategory, setActiveCategory] = useState<SkillCategory | 'all'>('all')
   const filtered = filterSkills(activeCategory)
   
@@ -25,7 +27,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-background px-4 py-20"
+      ref={ref}
+      className={`bg-background px-4 py-20 transition-all duration-700 ease-out ${
+        isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
     >
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col items-center text-center">
