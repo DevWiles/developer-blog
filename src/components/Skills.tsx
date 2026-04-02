@@ -105,11 +105,9 @@ const Skills = () => {
     >
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-2xl font-semibold md:text-3xl">
-            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
-              技
-            </span>
-            <span className="text-white">能</span>
+          <h2 className="text-3xl font-bold md:text-5xl">
+            <span className="text-black">技</span>
+            <span className="text-blue-500">能</span>
           </h2>
           <div className="mt-5 inline-flex flex-wrap justify-center gap-2 rounded-full bg-background p-1">
             {categories.map((category) => (
@@ -117,10 +115,10 @@ const Skills = () => {
                 key={category.id}
                 type="button"
                 onClick={() => setActiveCategory(category.id)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 active:scale-95 ${
+                className={`rounded-full px-5 py-2 text-base font-bold transition-all duration-300 active:scale-95 ${
                   activeCategory === category.id
                     ? 'bg-gradient-to-r from-blue-500 to-blue-500 text-white shadow-lg shadow-blue-500/30'
-                    : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                    : 'text-black hover:bg-white/5 hover:text-black'
                 }`}
               >
                 {category.label}
@@ -139,13 +137,13 @@ const Skills = () => {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-white">{skill.name}</p>
-                    <p className="mt-1 text-xs text-gray-400">
+                    <p className="text-sm font-bold text-black">{skill.name}</p>
+                    <p className="mt-1 text-xs text-gray-600">
                       {skill.category === 'frontend' && '前端'}
                       {skill.category === 'backend' && '后端'}
                       {skill.category === 'tools' && '工具'}
                     </p>
-                    <p className="mt-2 inline-flex rounded-full bg-white/10 px-2 py-0.5 text-xs text-gray-200">
+                    <p className="mt-2 inline-flex rounded-full bg-white/10 px-2 py-0.5 text-xs text-black">
                       {skill.level === 'advanced' && '熟练使用'}
                       {skill.level === 'intermediate' && '日常开发'}
                       {skill.level === 'beginner' && '正在学习'}
@@ -169,9 +167,9 @@ const Skills = () => {
               className="invisible rounded-2xl border border-white/5 bg-white/5 p-4 shadow-sm shadow-black/40"
               aria-hidden="true"
             >
-              <p className="text-sm font-medium text-white">&nbsp;</p>
-              <p className="mt-1 text-xs text-gray-400">&nbsp;</p>
-              <p className="mt-2 inline-flex rounded-full bg-white/10 px-2 py-0.5 text-xs text-gray-200">
+              <p className="text-sm font-bold text-black">&nbsp;</p>
+              <p className="mt-1 text-xs text-gray-600">&nbsp;</p>
+              <p className="mt-2 inline-flex rounded-full bg-white/10 px-2 py-0.5 text-xs text-black">
                 &nbsp;
               </p>
             </div>
