@@ -83,7 +83,7 @@ const sortSkillsByLevel = (skillsToSort: Skill[]): Skill[] => {
 }
 
 const Skills = () => {
-  const { ref, isIntersecting, isExiting } = useIntersectionObserver<HTMLElement>({ threshold: 0.25, downwardOnly: true })
+  const { ref, isIntersecting, isExiting } = useIntersectionObserver<HTMLElement>({ threshold: 0.15, downwardOnly: true })
   const [activeCategory, setActiveCategory] = useState<SkillCategory | 'all'>('all')
   const filtered = sortSkillsByLevel(filterSkills(activeCategory))
   
